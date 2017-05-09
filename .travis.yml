@@ -1,0 +1,12 @@
+language: clojure
+sudo: required
+lein: 2.7.1
+jdk:
+- oraclejdk8
+script:
+  - lein test
+  - lein new alexa-skill-template alexa-skill-test
+  - cd alexa-skill-test
+  - lein deps
+  - lein test
+
